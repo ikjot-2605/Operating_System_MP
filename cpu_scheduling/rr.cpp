@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process // each process will have the following attributes
+class rr_Process // each process will have the following attributes
 {
     public:
     int no;		//process number
@@ -17,7 +17,7 @@ class Process // each process will have the following attributes
     int is_completed;
 };
 
-bool comp_atime(Process P, Process Q) //to sort according to arrival time
+bool rr_comp_atime(rr_Process P, rr_Process Q) //to sort according to arrival time
 {
     if(P.atime==Q.atime)
         return P.no<Q.no;
@@ -34,7 +34,7 @@ int rr_main()
     cout<<"Enter time slice : ";
     cin>>time_slice;
 
-    vector<Process> p(n);   //creating array for the class
+    vector<rr_Process> p(n);   //creating array for the class
 
     for(int i = 0; i < n; i++)
     {
@@ -45,7 +45,7 @@ int rr_main()
         p[i].burst_remaining = p[i].btime;
     }
 
-    sort(p.begin(),p.end(),comp_atime); //sorting the Processes according to arrival time
+    sort(p.begin(),p.end(),rr_comp_atime); //sorting the Processes according to arrival time
 
     queue<int> q;   //ready queue
     q.push(0);      //pushing first process in the queue

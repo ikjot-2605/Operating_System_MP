@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process // each process will have the following attributes
+class sjf_Process // each process will have the following attributes
 {
     public:
     int no;		//process number
@@ -16,7 +16,7 @@ class Process // each process will have the following attributes
     int is_completed;   //to flag process that is completed
 };
 
-bool comp_atime(Process P, Process Q) //to sort according to arrival time
+bool sjf_comp_atime(sjf_Process P, sjf_Process Q) //to sort according to arrival time
 {
     if(P.atime==Q.atime)
         return P.no<Q.no;
@@ -32,7 +32,7 @@ int sjf_main()
 	cout<<"Enter the no. of Process to be performed : ";
     cin>>n;
 
-    vector<Process> p(n);   //creating array for the class
+    vector<sjf_Process> p(n);   //creating array for the class
 
     for(int i = 0; i < n; i++)
     {
@@ -42,7 +42,7 @@ int sjf_main()
         p[i].is_completed=0;
     }
 
-    sort(p.begin(),p.end(),comp_atime); //sorting the Processes according to arrival time
+    sort(p.begin(),p.end(),sjf_comp_atime); //sorting the Processes according to arrival time
 
     int current_time = 0;
     int completed = 0;

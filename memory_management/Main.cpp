@@ -3,9 +3,10 @@
 #include "mft_best.cpp"
 #include "mft_first.cpp"
 #include "mft_worst.cpp"
-#include "mvt_best.c"
-#include "mvt_first.c"
-#include "mvt_worst.c"
+#include "mvt_tools.cpp"
+#include "mvt_best.cpp"
+#include "mvt_first.cpp"
+#include "mvt_worst.cpp"
 using namespace std;
 
 int memory_main() {

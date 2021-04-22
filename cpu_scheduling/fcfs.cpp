@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process // each process will have the following attributes
+class fcfs_Process // each process will have the following attributes
 {
     public:
     int no;		//process number
@@ -15,7 +15,7 @@ class Process // each process will have the following attributes
     int ttime;	//turn around time
 };
 
-bool comp_atime(Process P, Process Q) //to sort according to arrival time
+bool fcfs_comp_atime(fcfs_Process P, fcfs_Process Q) //to sort according to arrival time
 {
     if(P.atime==Q.atime)
         return P.no<Q.no;
@@ -23,14 +23,14 @@ bool comp_atime(Process P, Process Q) //to sort according to arrival time
 }
 
 
-int fcfs_main()
+int cpu_fcfs_main()
 {
 	int n;
 	float sum_wtime=0.0,sum_ttime=0.0,sum_rtime=0.0;
 
 	cout<<"Enter the no. of process to be performed : ";
 	cin>>n;
-	vector<Process> P(n);	//creating array for the class
+	vector<fcfs_Process> P(n);	//creating array for the class
 
 	for(int i=0;i<n;i++)
 	{
@@ -39,7 +39,7 @@ int fcfs_main()
 		cin>>P[i].atime >>P[i].btime;
 	}
 
-    sort(P.begin(),P.end(),comp_atime); //sorting the processes according to arrival time
+    sort(P.begin(),P.end(),fcfs_comp_atime); //sorting the processes according to arrival time
 
 	int time=0;		//for calculating the start time of a process
 

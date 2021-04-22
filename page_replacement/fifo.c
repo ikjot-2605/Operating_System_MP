@@ -3,7 +3,7 @@
 #define MAX 1000
 int f,i=0,page[MAX],fr=0,p_fault=0;
 
-int FIFO_add(int frame[f])
+int FIFO_add(int frame[])
 {
     int data,j,set;
     printf("Enter page Number\t:");
@@ -34,12 +34,14 @@ int FIFO_add(int frame[f])
     }
     printf("\n");
     i++;
+    return 0;
 }
 
-int STOP()
+int fifo_stop()
 {
     printf("Number of page faults => %d\n",p_fault);
-    printf("Page fault ratio => %.2f\n",(float)p_fault/i);
+    printf("Page fault ratio => %.2f\n\n",(float)p_fault/i);
+    return 0;
 }
 
 int fifo_main()
@@ -63,11 +65,12 @@ int fifo_main()
                     FIFO_add(frame);
                     break;
             case 2:
-                    STOP();
+                    fifo_stop();
                     break;
             default:
                     printf("Invalid Input\n");
                     break;
         }
     }
+    return 0;
 }

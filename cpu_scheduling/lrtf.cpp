@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process // each process will have the following attributes
+class lrtf_Process // each process will have the following attributes
 {
     public:
     int no;		//process number
@@ -17,7 +17,7 @@ class Process // each process will have the following attributes
     int burst_remaining;
 };
 
-bool comp(Process P, Process Q) //to sort according to arrival time
+bool lrtf_comp_atime(lrtf_Process P, lrtf_Process Q) //to sort according to arrival time
 {
     if(P.atime==Q.atime)
         return P.no<Q.no;
@@ -32,7 +32,7 @@ int lrtf_main()
 	cout<<"Enter the no. of Process to be performed : ";
     cin>>n;
 
-    vector<Process> p(n);   //creating array for the class
+    vector<lrtf_Process> p(n);   //creating array for the class
 
     for(int i = 0; i < n; i++)
     {
@@ -43,7 +43,7 @@ int lrtf_main()
         p[i].burst_remaining = p[i].btime;
     }
 
-    sort(p.begin(),p.end(),comp); //sorting the Processes according to arrival time
+    sort(p.begin(),p.end(),lrtf_comp_atime); //sorting the Processes according to arrival time
 
     int current_time = 0;
     int completed = 0;

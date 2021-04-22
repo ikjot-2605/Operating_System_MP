@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define MAX 1000
-int f,i=0,page[MAX],fr=0,p_fault=0;
+//int f,i=0,page[MAX],fr=0,p_fault=0;
 
-int LRU_add(int frame[f])
+int LRU_add(int frame[])
 {
     int data,j,k,set,n[f];
     printf("Enter page Number\t:");
@@ -65,12 +65,14 @@ int LRU_add(int frame[f])
     }
     printf("\n");
     i++;
+    return 0;
 }
 
-int STOP()
+int lru_stop()
 {
     printf("Number of page faults => %d\n",p_fault);
-    printf("Page fault ratio => %.2f\n",(float)p_fault/i);
+    printf("Page fault ratio => %.2f\n\n",(float)p_fault/i);
+    return 0;
 }
 
 int lru_main()
@@ -94,11 +96,12 @@ int lru_main()
                     LRU_add(frame);
                     break;
             case 2:
-                    STOP();
+                    lru_stop();
                     break;
             default:
                     printf("Invalid Input\n");
                     break;
         }
     }
+    return 0;
 }

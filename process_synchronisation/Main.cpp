@@ -7,6 +7,7 @@ using namespace std;
 
 int sync_main() {
     while (true) {
+        cout << endl << endl;
         cout << "Choose one of the following options..." << endl;
         cout << "0. Go back to main menu." << endl;
         cout << "1. Producer Consumenr Problem Demo" << endl;

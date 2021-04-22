@@ -11,6 +11,7 @@ using namespace std;
 
 int memory_main() {
     while (true) {
+        cout << endl << endl;
         cout << "Choose one of the following options..." << endl;
         cout << "0. Go back to main menu." << endl;
         cout << "1. MFT Best Fit Demo" << endl;

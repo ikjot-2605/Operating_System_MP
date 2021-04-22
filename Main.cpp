@@ -9,6 +9,7 @@ using namespace std;
 
 int main () {
     while (true) {
+        cout << endl << endl;
         cout << "Choose one of the following..." << endl;
         cout << "0. Exit the Program" << endl;
         cout << "1. CPU Scheduling" << endl;

@@ -12,6 +12,7 @@ using namespace std;
 int cpu_main() {
     int choice;
     while (true) {
+        cout << endl << endl;
         cout << "Choose one of the following options..." << endl;
         cout << "0. Go back to main menu." << endl;
         cout << "1. First Come First Serve Demo" << endl;
@@ -22,6 +23,7 @@ int cpu_main() {
         cout << "6. Shortest Job First Demo" << endl;
         cout << "7. Shortest Remaining Time First Demo" << endl;
         cout << "Enter your choice here: " << endl;
+        cin >> choice;
         if (choice == 0) break;
         else {
             switch (choice) {

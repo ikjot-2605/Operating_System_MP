@@ -24,4 +24,5 @@ int page_main() {
             }
         }
     }
+    return 0;
 }

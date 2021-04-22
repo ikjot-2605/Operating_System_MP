@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process // each process will have the following attributes
+class priority_non_preemptive_Process  // each process will have the following attributes
 {
     public:
     int no;		//process number
@@ -17,7 +17,7 @@ class Process // each process will have the following attributes
     int is_completed;   //to flag process that is completed
 };
 
-bool comp_priority(Process P, Process Q) //to sort according to arrival time and priority
+bool comp_non_priority(priority_non_preemptive_Process  P, priority_non_preemptive_Process  Q) //to sort according to arrival time and priority
 {
     if(P.atime==Q.atime && P.priority!=Q.priority)
         return P.priority>Q.priority;
@@ -26,7 +26,7 @@ bool comp_priority(Process P, Process Q) //to sort according to arrival time and
     return (P.atime<Q.atime);
 }
 
-int main()
+int pri_non_pre_main()
 {
     int n;
     float sum_ttime=0,sum_wtime=0,sum_rtime=0;
@@ -34,7 +34,7 @@ int main()
 	cout<<"Enter the no. of Process to be performed : ";
     cin>>n;
 
-    vector<Process> p(n);   //creating array for the class
+    vector<priority_non_preemptive_Process > p(n);   //creating array for the class
 
     for(int i = 0; i < n; i++)
     {
@@ -45,7 +45,7 @@ int main()
         p[i].is_completed=0;
     }
 
-    sort(p.begin(),p.end(),comp_priority); //sorting the Processes according to arrival time and priority
+    sort(p.begin(),p.end(),comp_non_priority); //sorting the Processes according to arrival time and priority
 
     int current_time = 0;
     int completed = 0;

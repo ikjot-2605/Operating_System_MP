@@ -95,6 +95,7 @@ int bankers_main()
                     flag[i]=true;
                     order[count]=i+1;
                     count++;
+                    check=true;
                     for(k=0;k<r;k++)
                     {
                         available[k] += allocated[i][k];

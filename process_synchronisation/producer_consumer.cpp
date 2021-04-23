@@ -21,7 +21,7 @@ int time_c = 0; //Time Variable to calculate completion time
 bool comparision(const p_c & x,
     const p_c & y) {
     if (x.at == y.at) {
-        if (x.producer == true && y.producer == false) return true;
+        if (x.producer == true && y.producer == false && x.at == y.at) return true;
         else return false;
     } else return x.at < y.at;
 }

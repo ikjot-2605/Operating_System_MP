@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <bits/stdc++.h>
 #include "bankers.cpp"
+#include "process_synchronisation_utils.cpp"
 #include "producer_consumer.cpp"
 #include "dining_philosopher.cpp"
 #include "reader_writer.cpp"
+#include "sleeping_barber.cpp"
 using namespace std;
 
 #define RED "\x1b[31m"
@@ -24,6 +26,7 @@ int sync_main() {
         cout << BLUE << "2. Reader Writer Problem Demo" << endl;
         cout << BLUE << "3. Dining Philosophers Problem Demo" << endl;
         cout << BLUE << "4. Bankers Problem Demo" << endl;
+        cout << BLUE << "5. Sleeping Barber Demo" << endl;
         cout << YELLOW << "Enter your choice here: " << RESET;
         int choice; cin >> choice;
         if (choice == 0) break;
@@ -34,6 +37,7 @@ int sync_main() {
                 case 2: reader_writer_main(); break;
                 case 3: dining_main(); break;
                 case 4: bankers_main(); break;
+                case 5: sleeping_barber_main(); break;
                 default: cout << YELLOW << "Invalid Choice. Please try again"; break;
             }
         }

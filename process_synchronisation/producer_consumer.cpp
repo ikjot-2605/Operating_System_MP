@@ -15,7 +15,6 @@ struct p_c {
 int s = 1; // Semaphore Variable
 int empty = 6; //Empty Variable to keep the count of empty cells
 int full = 0; // Full Variable to keep the count of occupied cells
-int time_c = 0; //Time Variable to calculate completion time
 
 //a function to order according to priority. Producer is given more priority if arrival time of consumer is equal to arrival time of producer
 bool comparision(const p_c & x,
@@ -24,18 +23,6 @@ bool comparision(const p_c & x,
         if (x.producer == true && y.producer == false && x.at == y.at) return true;
         else return false;
     } else return x.at < y.at;
-}
-
-//Signal Function
-int signal(int s) {
-    s++;
-    return s;
-}
-//Wait Function
-int wait(int s) {
-    while (s <= 0);
-    s--;
-    return s;
 }
 
 // Producer Function

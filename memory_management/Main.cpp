@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <bits/stdc++.h>
-#include "mft_best.cpp"
-#include "mft_first.cpp"
-#include "mft_worst.cpp"
+#include "mft_best.c"
+#include "mft_first.c"
+#include "mft_worst.c"
 #include "mvt_tools.cpp"
 #include "mvt_best.cpp"
 #include "mvt_first.cpp"

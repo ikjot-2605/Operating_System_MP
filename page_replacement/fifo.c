@@ -47,6 +47,10 @@ int fifo_stop()
 int fifo_main()
 {
     int choice=1,j;
+    page[MAX] = {0};
+    fr=0;
+    p_fault=0;
+    i=0;
     printf("Enter the number of frames\t:");
     scanf("%d",&f);
     int frame[f];

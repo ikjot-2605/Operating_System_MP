@@ -87,8 +87,8 @@ int reader(rdr_wtr a[],int i, int n){
         if(a[j].ta!=-1){
             cout<<"r"<<a[j].s_no<<" ";
             
-            if(a[j].ta+a[j].tb>max_time){
-                max_time=a[j].ta+a[j].tb;
+            if(max(a[j].ta,ti)+a[j].tb>max_time){
+                max_time=max(a[j].ta,ti)+a[j].tb;
             }
             //marking that this person has finished
             a[j].ta=-1;

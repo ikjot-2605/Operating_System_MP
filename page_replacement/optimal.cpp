@@ -42,7 +42,7 @@ int optimal_main()
             {
                 flag1=1;
                 flag2=1;
-                cout<<"\npage "<<page[j]<<" already exists in frame "<<i<<"\t\t\t\t\t\t";
+                cout<<"\npage "<<page[j]<<" already exists in frame "<<i<<"\t\t\t\t";
                 break;
             }
         }
@@ -52,7 +52,7 @@ int optimal_main()
             {
                 if(frame[i]==-1)
                 {
-                    cout<<"\npage "<<page[j]<<" inserted into frame "<<i<<"\t\t\t\t\t\t\t";
+                    cout<<"\npage "<<page[j]<<" inserted into frame "<<i<<"\t\t\t\t\t";
                     frame[i]=page[j];
                     flag2=1;
                     page_fault++;

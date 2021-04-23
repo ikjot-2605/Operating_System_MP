@@ -17,10 +17,10 @@ using namespace std;
 int sync_main() {
     while (true) {
         cout << endl << endl;
-        cout << GREEN << "--------- MAIN MENU ----------" << endl;
+        cout << GREEN << "------- PROCESS SYNCHRONISATION ------" << endl;
         cout << GREEN << "Choose one of the following options..." << endl;
         cout << YELLOW << "0. Go back to main menu." << endl;
-        cout << BLUE << "1. Producer Consumenr Problem Demo" << endl;
+        cout << BLUE << "1. Producer Consumer Problem Demo" << endl;
         cout << BLUE << "2. Reader Writer Problem Demo" << endl;
         cout << BLUE << "3. Dining Philosophers Problem Demo" << endl;
         cout << BLUE << "4. Bankers Problem Demo" << endl;

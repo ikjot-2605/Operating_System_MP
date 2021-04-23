@@ -173,7 +173,7 @@ void producer_consumer_main() {
                 cqueue.push(left1[i]);
                 p_c x = cqueue.front();
                 time_c = max(time_c, x.at);
-                cout << "\nConsumer" << x.id << " starts consuming at t = " << time_c << endl;
+                cout << "\nConsumer " << x.id << " starts consuming at t = " << time_c << endl;
                 for (int j = i+1; j < n; j++) {
                     if (left1[j].at >= x.at) {
                         if (left1[j].producer == true) {

@@ -42,7 +42,7 @@ int optimal_main()
             {
                 flag1=1;
                 flag2=1;
-                cout<<"\npage "<<page[j]<<" already exists in frame\t\t";
+                cout<<"\npage "<<page[j]<<" already exists in frame "<<i<<"\t\t\t\t\t\t";
                 break;
             }
         }
@@ -52,7 +52,7 @@ int optimal_main()
             {
                 if(frame[i]==-1)
                 {
-                    cout<<"\npage "<<page[j]<<" inserted into frame\t\t\t";
+                    cout<<"\npage "<<page[j]<<" inserted into frame "<<i<<"\t\t\t\t\t\t\t";
                     frame[i]=page[j];
                     flag2=1;
                     page_fault++;
@@ -98,7 +98,7 @@ int optimal_main()
                     }
                 }
             }
-            cout<<"\npage "<<frame[pos]<<" is replaced by page "<<page[j]<<"\t\t";
+            cout<<"\npage "<<page[j]<<" inserted into frame "<<pos<<" after replacing page "<<frame[pos]<<"\t\t";
             frame[pos]=page[j];
             page_fault++;
         }
@@ -107,4 +107,5 @@ int optimal_main()
         cout<<frame[k]<<"\t";
     }
     cout<<"\n\nNumber of page faults : "<<page_fault<<endl;
+    cout<<"Page fault ratio = "<<page_fault/float(nos_page)<<endl;
 }

@@ -9,23 +9,33 @@
 #include "srtf.cpp"
 using namespace std;
 
+#define RED "\x1b[31m"
+#define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+#define BLUE "\x1b[34m"
+#define MAGENTA "\x1b[35m"
+#define CYAN "\x1b[36m"
+#define RESET "\x1b[0m"
+
 int cpu_main() {
     int choice;
     while (true) {
         cout << endl << endl;
-        cout << "Choose one of the following options..." << endl;
-        cout << "0. Go back to main menu." << endl;
-        cout << "1. First Come First Serve Demo" << endl;
-        cout << "2. Highest Response Ratio Next Demo" << endl;
-        cout << "3. Longest Job First Demo" << endl;
-        cout << "4. Longest Remaining Time First Demo" << endl;
-        cout << "5. Round Robin Demo" << endl;
-        cout << "6. Shortest Job First Demo" << endl;
-        cout << "7. Shortest Remaining Time First Demo" << endl;
-        cout << "Enter your choice here: " << endl;
+        cout << GREEN << "----------- CPU SCHEDULING -----------" << endl;
+        cout << GREEN << "Choose one of the following options..." << endl;
+        cout << YELLOW << "0. Go back to main menu." << endl;
+        cout << BLUE << "1. First Come First Serve Demo" << endl;
+        cout << BLUE << "2. Highest Response Ratio Next Demo" << endl;
+        cout << BLUE << "3. Longest Job First Demo" << endl;
+        cout << BLUE << "4. Longest Remaining Time First Demo" << endl;
+        cout << BLUE << "5. Round Robin Demo" << endl;
+        cout << BLUE << "6. Shortest Job First Demo" << endl;
+        cout << BLUE << "7. Shortest Remaining Time First Demo" << endl;
+        cout << YELLOW << "Enter your choice here: " << RESET;
         cin >> choice;
         if (choice == 0) break;
         else {
+            cout << endl << endl;
             switch (choice) {
                 case 1: cpu_fcfs_main(); break;
                 case 2: hrrn_main(); break;
@@ -34,7 +44,7 @@ int cpu_main() {
                 case 5: rr_main(); break;
                 case 6: sjf_main(); break;
                 case 7: srtf_main(); break;
-                default: cout << "Invalid Choice. Please try again"; break;
+                default: cout << YELLOW << "Invalid Choice. Please try again"; break;
             }
         }
     }

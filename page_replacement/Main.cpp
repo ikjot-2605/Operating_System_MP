@@ -3,6 +3,8 @@
 #include "fifo.c"
 #include "lru.c"
 #include "mru.c"
+#include "paging.cpp"
+#include "optimal.cpp"
 using namespace std;
 
 #define RED "\x1b[31m"
@@ -22,6 +24,8 @@ int page_main() {
         cout << BLUE << "1. First In First Out Demo" << endl;
         cout << BLUE << "2. Least Recently Used Demo" << endl;
         cout << BLUE << "3. Most Recently Used Demo" << endl;
+        cout << BLUE << "4. Optimal Page Replacement Demo" << endl;
+        cout << BLUE << "5. Paging with FIFO Demo" << endl;
         cout << YELLOW << "Enter your choice here: " << RESET;
         int choice; cin >> choice;
         if (choice == 0) break;
@@ -31,6 +35,8 @@ int page_main() {
                 case 1: fifo_main(); break;
                 case 2: lru_main(); break;
                 case 3: mru_main(); break;
+                case 4: optimal_main(); break;
+                case 5: paging_main(); break;
                 default: cout << YELLOW << "Invalid Choice. Please try again"; break;
             }
         }

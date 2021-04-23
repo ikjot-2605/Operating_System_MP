@@ -54,7 +54,7 @@ int paging_main()
             cnt++;
             if(page_no>=pages_VM)
                 cout<<"Invalid page number!!!\n";
-            else if( offset >= (page_size*pow(2,9)) )
+            else if( offset >= (page_size*pow(2,10)) )
                 cout<<"Invalid offset!!!\n";
             else
             {

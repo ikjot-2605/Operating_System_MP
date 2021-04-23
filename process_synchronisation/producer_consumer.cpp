@@ -3,7 +3,6 @@
 #include<algorithm>
 #include<stack>
 #include<queue>
-#include<semaphore.h>
 using namespace std;
 
 struct p_c {

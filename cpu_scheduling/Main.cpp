@@ -7,6 +7,8 @@
 #include "rr.cpp"
 #include "sjf.cpp"
 #include "srtf.cpp"
+#include "priority_non_p.cpp"
+#include "priority_p.cpp"
 using namespace std;
 
 #define RED "\x1b[31m"
@@ -31,6 +33,8 @@ int cpu_main() {
         cout << BLUE << "5. Round Robin Demo" << endl;
         cout << BLUE << "6. Shortest Job First Demo" << endl;
         cout << BLUE << "7. Shortest Remaining Time First Demo" << endl;
+        cout << BLUE << "8. Non Pre-emptive Priority Scheduling Demo" << endl;
+        cout << BLUE << "9. Pre-emptive Priority Scheduling Demo" << endl;
         cout << YELLOW << "Enter your choice here: " << RESET;
         cin >> choice;
         if (choice == 0) break;
@@ -44,6 +48,8 @@ int cpu_main() {
                 case 5: rr_main(); break;
                 case 6: sjf_main(); break;
                 case 7: srtf_main(); break;
+                case 8: priority_non_p_main(); break;
+                case 9: priority_p_main(); break;
                 default: cout << YELLOW << "Invalid Choice. Please try again"; break;
             }
         }
